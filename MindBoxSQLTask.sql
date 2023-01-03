@@ -20,14 +20,14 @@ Create table ProductsCategories
 )
 
 --Заполнение таблиц
-INSERT INTO Products ("Name") VALUES('Ïëàòüå')
-INSERT INTO Products ("Name") VALUES('Áðþêè')
-INSERT INTO Products ("Name") VALUES('Êîëãîòêè')
-INSERT INTO Products ("Name") VALUES('Øàïêà')
+INSERT INTO Products ("Name") VALUES('Платье')
+INSERT INTO Products ("Name") VALUES('Брюки')
+INSERT INTO Products ("Name") VALUES('Колготки')
+INSERT INTO Products ("Name") VALUES('Шапка')
 
-INSERT INTO Categories ("Name") VALUES('Æåíñêîå')
-INSERT INTO Categories ("Name") VALUES('Ìóæñêîå')
-INSERT INTO Categories ("Name") VALUES('Äåòñêîå')
+INSERT INTO Categories ("Name") VALUES('Женское')
+INSERT INTO Categories ("Name") VALUES('Мужское')
+INSERT INTO Categories ("Name") VALUES('Детское')
 
 INSERT INTO ProductsCategories (ProductId, CategoriesId) VALUES('0', '0')
 INSERT INTO ProductsCategories (ProductId, CategoriesId) VALUES('0', '2')
