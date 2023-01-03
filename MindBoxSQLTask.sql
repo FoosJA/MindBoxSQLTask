@@ -1,6 +1,6 @@
---Создание БД
+--РЎРѕР·РґР°РЅРёРµ Р‘Р”
 CREATE DATABASE MaindBoxDB;
---Создание таблиц
+--РЎРѕР·РґР°РЅРёРµ С‚Р°Р±Р»РёС†
 Create table Products
 ( 
 	Id INT NOT NULL CONSTRAINT primary_id_Product PRIMARY KEY IDENTITY (0,1),
@@ -19,22 +19,22 @@ Create table ProductsCategories
 	CategoriesId INT NOT NULL CONSTRAINT foreign_category FOREIGN KEY REFERENCES Categories (Id)
 )
 
---Заполнение таблиц
-INSERT INTO Products ("Name") VALUES('Платье')
-INSERT INTO Products ("Name") VALUES('Брюки')
-INSERT INTO Products ("Name") VALUES('Колготки')
-INSERT INTO Products ("Name") VALUES('Шапка')
+--Р—Р°РїРѕР»РЅРµРЅРёРµ С‚Р°Р±Р»РёС†
+INSERT INTO Products ("Name") VALUES('ГЏГ«Г ГІГјГҐ')
+INSERT INTO Products ("Name") VALUES('ГЃГ°ГѕГЄГЁ')
+INSERT INTO Products ("Name") VALUES('ГЉГ®Г«ГЈГ®ГІГЄГЁ')
+INSERT INTO Products ("Name") VALUES('ГГ ГЇГЄГ ')
 
-INSERT INTO Categories ("Name") VALUES('Женское')
-INSERT INTO Categories ("Name") VALUES('Мужское')
-INSERT INTO Categories ("Name") VALUES('Детское')
+INSERT INTO Categories ("Name") VALUES('Г†ГҐГ­Г±ГЄГ®ГҐ')
+INSERT INTO Categories ("Name") VALUES('ГЊГіГ¦Г±ГЄГ®ГҐ')
+INSERT INTO Categories ("Name") VALUES('Г„ГҐГІГ±ГЄГ®ГҐ')
 
 INSERT INTO ProductsCategories (ProductId, CategoriesId) VALUES('0', '0')
 INSERT INTO ProductsCategories (ProductId, CategoriesId) VALUES('0', '2')
 INSERT INTO ProductsCategories (ProductId, CategoriesId) VALUES('1', '1')
 INSERT INTO ProductsCategories (ProductId, CategoriesId) VALUES('2', '2')
 
---Выбор всех пар "Имя продукта - Имя категории"
+--Р·Р°РїСЂРѕСЃ РґР»СЏ РІС‹Р±РѕСЂР° РІСЃРµС… РїР°СЂ В«РРјСЏ РїСЂРѕРґСѓРєС‚Р° вЂ“ РРјСЏ РєР°С‚РµРіРѕСЂРёРёВ»
 SELECT Products.Name, Categories.Name
 from Products
 LEFT JOIN ProductsCategories on ProductsCategories.ProductId = Products.Id
